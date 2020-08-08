@@ -24,5 +24,23 @@
 
 //---------prompt 입력받아 html에 입력하기-------------------
 // document.getElementById('h1').innerHTML = prompt();
-document.getElementById('h1').innerHTML += prompt();
+
+function alert_button() {
+	alert("마 이게 경고창이다!");	
+}
+
+function style_change() {
+	document.querySelector('h1').classList.toggle("color");
+}
+
+const ball = document.querySelector('.ball');
+
+  window.addEventListener('click', function (e) {
+    ball.style.transform = 'translate(' + (e.clientX - 15) + 'px, ' + (e.clientY - 15) + 'px)';
+  });
+
+
+
+
+
 
