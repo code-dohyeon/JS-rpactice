@@ -30,7 +30,7 @@ function alert_button() {
 }
 
 function style_change() {
-	document.querySelector('h1').classList.toggle("color");
+	document.querySelector('h1').classList.add("color");
 }
 
 const ball = document.querySelector('.ball');
