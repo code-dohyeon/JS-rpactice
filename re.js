@@ -1,4 +1,4 @@
-// =================반복문==================
+// ===================================반복문==========================================
 
 // for
 // while
@@ -50,3 +50,36 @@
 // 	console.log(x);
 // 	x = x + 1;
 // }
+
+
+//============================while=====================================
+
+// while(조건문)
+// while문의 경우 초기화(항상 필요한건 아니지만) 밖에
+// 증감문은 필요시 안에 존재합니다.
+
+
+// while (cnt > 0) {
+//     console.log(cnt);
+//     cnt--;
+//     // console.log(cnt);
+// }
+
+// for (let cnt = 0; cnt < 10; cnt++)
+
+let cnt = 1;
+let result = 0;
+// let static_number = Number(prompt());
+
+
+// while(cnt <= 10) {
+//     result = result * 5 /*static_number*/;
+//     console.log("5의" + cnt + "승은" + result + "입니다.");
+//     cnt++;
+// }
+
+while(cnt <= 10) {
+    result = result + cnt /*static_number*/;
+    console.log(result);
+    cnt++;
+}

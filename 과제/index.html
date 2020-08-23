@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+    <body>
+
+        <h1 class="h1"></h1>
+
+        <div id="number_div">
+            <button class="number_btn" onclick="push_number_btn1()">1</button>
+            <button class="number_btn" onclick="push_number_btn2()">2</button>
+            <button class="number_btn" onclick="push_number_btn3()">3</button>
+            <button class="number_btn" onclick="push_number_btn4()">4</button>
+            <button class="number_btn" onclick="push_number_btn5()">5</button>
+            <button class="number_btn" onclick="push_number_btn6()">6</button>
+            <button class="number_btn" onclick="push_number_btn7()">7</button>
+            <button class="number_btn" onclick="push_number_btn8()">8</button>
+            <button class="number_btn" onclick="push_number_btn9()">9</button>
+        </div>
+        
+        <div id="calculate_div">
+            <button class="calculate_btn" onclick="push_calculate_btn1()">+</button>
+            <button class="calculate_btn" onclick="push_calculate_btn2()">-</button>
+            <button class="calculate_btn" onclick="push_calculate_btn3()">*</button>
+            <button class="calculate_btn" onclick="push_calculate_btn4()">/</button>
+        </div>
+        
+        <div id="reslut_div">
+            <button class="result" onclick="push_reslut_btn()">=</button>
+        </div>
+        
+
+        <script>
+
+            let input_Number=0;
+            let cal = ""
+            let result=0;
+
+            function reset() {
+                input_Number = 0;
+                cal = ""
+                result = 0;
+            }
+            function push_number_btn1() {
+                input_Number = input_Number*10 + 1;
+                console.log("input Number: " + input_Number);
+            }         
+            function push_number_btn2() {
+                input_Number = input_Number*10 + 2;
+                console.log("input Number: " + input_Number);
+            }
+            function push_number_btn3() {
+                input_Number = input_Number*10 + 3;
+                console.log("input Number: " + input_Number);
+            }
+            function push_number_btn4() {
+                input_Number = input_Number*10 + 4;
+                console.log("input Number: " + input_Number);
+            }
+            function push_number_btn5() {
+                input_Number = input_Number*10 + 5;
+                console.log("input Number: " + input_Number);
+            }
+            function push_number_btn6() {
+                input_Number = input_Number*10 + 6;
+                console.log("input Number: " + input_Number);
+            }
+            function push_number_btn7() {
+                input_Number = input_Number*10 + 7;
+                console.log("input Number: " + input_Number);
+            }
+            function push_number_btn8() {
+                input_Number = input_Number*10 + 8;
+                console.log("input Number: " + input_Number);
+            }
+            function push_number_btn9() {
+                input_Number = input_Number*10 + 9;
+                console.log("input Number: " + input_Number);
+            }
+
+            function calculate_number(booho){
+                if (cal == "") {
+                    result += input_Number
+                }else{
+                    if (cal == "+"){
+                        result += input_Number
+                    }else if (cal == "-"){
+                        result -= input_Number
+                    }else if (cal == "*"){
+                        result *= input_Number
+                    }else if (cal == "/"){
+                        result /= input_Number
+                    }
+                }
+                input_Number = 0
+                cal = booho
+            }
+
+            function push_calculate_btn1() {
+                
+                calculate_number("+")
+                console.log(result)
+            }
+
+            function push_calculate_btn2() {
+                calculate_number("-")
+                console.log(result)
+            }
+
+            function push_calculate_btn3() {
+                calculate_number("*")
+                console.log(result)
+            }
+
+            function push_calculate_btn4() {
+                calculate_number("/")
+                console.log(result)
+            }
+
+            function push_reslut_btn() {
+                calculate_number()
+                console.log(result)
+                reset()
+            }
+
+                
+        </script>
+
+    </body>
+</html>
